@@ -3,11 +3,15 @@
 #Check URL to see if the changes were successful
     #  Local URL: http://localhost:8501
     #  Network URL: http://192.168.1.65:8501
+# This app is deployed on the Streamlit Service (see below)
+    #https://danielstnntt-python-to-do-app-webgui-aspne0.streamlit.app/
 
 import functions
 import streamlit as st
 
 todos = functions.get_todos()
+
+st.set_page_config(layout="wide")
 
 def add_todo():
     #session_state is a dictionary that stores the value on the user's session
